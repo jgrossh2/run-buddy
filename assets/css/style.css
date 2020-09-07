@@ -154,7 +154,16 @@ button {
     margin: 0 auto 35px auto;
     width: 50%;
 }
-
+.service-grid-container {
+    display: grid;
+}
+.service-grid-item {
+    width: 200px;
+    height: 50px;
+    background-color: orange;
+    border: solid;
+    color: black;
+}
 .primary-border {
     border-color: #fce138;
 }
