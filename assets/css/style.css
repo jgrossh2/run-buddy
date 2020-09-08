@@ -234,12 +234,18 @@ button {
 
 .section-title {
     font-size: 48px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     border-bottom: 3px solid;
     padding-bottom: 20px;
     text-align: center;
-    margin: 0 auto 35px auto;
+    margin: auto;
     width: 50%;
+}
+.secondary-border {
+    color: var(--primary-color);
+}
+.section-title div {
+    margin: auto;
 }
 /*SERVICE STYLES BEGIN */
 .services {
@@ -255,6 +261,7 @@ button {
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
     font-size: 1.2rem;
+    margin: auto;
 }
 .service-grid-item {
     padding: 15px 0;
@@ -385,33 +392,33 @@ button {
 }
 
 .contact-info {
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .contact-info > * {
     flex: 1; 
     margin: 15px;
 }
-
 .contact-info iframe {
     height= 400px;
 }
-
 .contact-info div {
     color: white;
 }
-
 .contact-info h3 {
     color: var(--primary-color);
     font-size: 32px;
 }
-
 .contact-info p, .contact-info address {
     margin: 20px 0;
     line-height: 1.5;
     font-size: 16px;
     font-style: normal;
     color:white;
+}
+.contact-info, .contact-form {
+    text-align: justify;
 }
 .contact-info input, .contact-info textarea {
     border: 1px solid var(--secondary-color);
@@ -428,7 +435,7 @@ button {
     width: 100%;
     border: none;
     background: var(--primary-color);
-    color: #024e76;
+    color: var(--secondary-color);
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
@@ -436,7 +443,7 @@ button {
 }
 .contact-info input:focus, .contact-info textarea:focus {
     background-color: rgba(255,255,255, 1);
-    outline:none;
+    outline: none;
 }
 ]
 .contact-form button:hover {
