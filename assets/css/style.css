@@ -15,6 +15,13 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 
 header h1 {
@@ -22,6 +29,7 @@ header h1 {
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
@@ -45,8 +53,14 @@ header nav ul li a{
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
+header nav ul li a:hover {
+    background: #fce138;
+    color:#024e76;
+    border-radius: 15px;
+    text-shadow: none;
+}
 footer {
     display: flex;
     background: #fce138;
@@ -82,16 +96,23 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 .hero-form {
     color: #024e76;
     padding: 20px;
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, .8);
     border-style: solid;
     border-width: 3px;
     border-color: #024e76;
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 .hero-cta {
     width: 35%;
@@ -105,6 +126,7 @@ section {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form h3 {
@@ -114,6 +136,9 @@ section {
 .hero-form p {
     margin: 5px 0 15px 0;
 }
+.hero-form button {
+    border-radius: 10px;
+}
 .form-input {
     border-style: solid;
     border width: 1px;
@@ -122,6 +147,12 @@ section {
     display: block;
     width: 100%;
     color: #024e76;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 button {
     background-color: #024e76;
@@ -156,7 +187,7 @@ button {
 }
 /*SERVICE STYLES BEGIN */
 .services {
-    background: #fce138;
+    background: #024e76;
 }
 .service-grid-container {
     background: lightyellow;
@@ -205,11 +236,14 @@ button {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #3916b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #39a6b2;
+}
+.step:last-child {
+    border-bottom: none;
 }
 .step h3 {
     color: #024e76;
@@ -295,8 +329,7 @@ button {
 }
 
 .contact-info {
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-block;
     justify-content: space-between;
 }
 .contact-info > * {
@@ -313,7 +346,7 @@ button {
 }
 
 .contact-info h3 {
-    color: #024e76;
+    color: #fce138;
     font-size: 32px;
 }
 
@@ -324,15 +357,16 @@ button {
     font-style: normal;
     color:white;
 }
-.contact-form input, .contact-form textarea {
+.contact-info input, .contact-info textarea {
     border: 1px solid #024e76;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba (2, 78, 118, .75);
 }
 .contact-form button {
     width: 100%;
@@ -342,6 +376,16 @@ button {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+}
+.contact-info input:focus, .contact-info textarea:focus {
+    background-color: rgba(255,255,255, 1);
+    outline:none;
+}
+]
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
 }
 .contact-info a {
     color: #fce138
@@ -353,6 +397,7 @@ button {
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
     header h1 {
         width: 100%;
